@@ -38,7 +38,7 @@
         <div class="faded-bg animated"></div>
         <div class="col-xs-6 col-xs-offset-3 login-sidebar">
             <div class="login-container">
-                <h1 style="margin-bottom: 20px;">Dishiri</h1>
+                <h1 style="margin-bottom: 20px;">Dishiki</h1>
                 <p>{{ __('voyager.login.signin_below') }}</p>
 
                 <form action="{{ route('voyager.login') }}" method="POST">
