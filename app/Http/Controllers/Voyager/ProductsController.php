@@ -38,7 +38,8 @@ class ProductsController extends VoyagerBaseController
         $slug = $this->getSlug($request);
 
         // GET THE DataType based on the slug
-        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
+        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)
+        ->first();
 
         // Check permission
         $this->authorize('browse', app($dataType->model_name));
@@ -128,7 +129,8 @@ class ProductsController extends VoyagerBaseController
     {
         $slug = $this->getSlug($request);
 
-        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
+        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)
+        ->first();
 
         // Compatibility with Model binding.
         $id = $id instanceof Model ? $id->{$id->getKeyName()} : $id;
@@ -185,15 +187,22 @@ class ProductsController extends VoyagerBaseController
         // Validate fields with ajax
         $val = $this->validateBread($request->all(), $dataType->editRows);
 
+
         if ($val->fails()) {
             return response()->json(['errors' => $val->messages()]);
         }
 
         if (!$request->ajax()) {
             $requestNew = $request;
-            $requestNew['price'] = $request->price * 100;
+            // $requestNew['price'] = $request->price * 100;
+            $requestNew['price'] = $request->price;
+
+
+            // dd('oooj', $requestNew->images);
 
             $this->insertUpdateData($requestNew, $slug, $dataType->editRows, $data);
+
+
 
             event(new BreadDataUpdated($dataType, $data));
 

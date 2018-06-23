@@ -152,7 +152,7 @@ class DataRowsTableSeederCustom extends Seeder
             $dataRow->fill([
                 'type'         => 'multiple_images',
                 'display_name' => 'Images',
-                'required'     => 1,
+                'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
                 'edit'         => 1,
@@ -166,13 +166,13 @@ class DataRowsTableSeederCustom extends Seeder
         $dataRow = $this->dataRow($productDataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type'         => 'timestamp',
+                'type'         => 'hidden',
                 'display_name' => 'Created At',
-                'required'     => 1,
+                'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
-                'edit'         => 1,
-                'add'          => 1,
+                'edit'         => 0,
+                'add'          => 0,
                 'delete'       => 1,
                 'details'      => '',
                 'order'        => 10,
@@ -182,13 +182,13 @@ class DataRowsTableSeederCustom extends Seeder
         $dataRow = $this->dataRow($productDataType, 'updated_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type'         => 'timestamp',
+                'type'         => 'hidden',
                 'display_name' => 'Updated At',
-                'required'     => 1,
+                'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
-                'edit'         => 1,
-                'add'          => 1,
+                'edit'         => 0,
+                'add'          => 0,
                 'delete'       => 1,
                 'details'      => '',
                 'order'        => 11,

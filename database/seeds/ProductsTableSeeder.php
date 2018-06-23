@@ -22,7 +22,7 @@ class ProductsTableSeeder extends Seeder
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                 'image' => 'men-clothes/'.$i.'.jpg',
                 // 'image' => 'products/dummy/desktop-'.$i.'.jpg',                
-                'images' => '["products\/dummy\/men-clothes\/' . $i . '.jpg", "men-clothes\/' . $i . '.jpg"]',  
+                'images' => '["men-clothes\/' . $i . '.jpg", "men-clothes\/' . $i . '.jpg"]',  
                 // 'images' => '["products\/dummy\/laptop-2.jpg"]', 
                 // 'images' => '["products\/dummy\/laptop-"' . 2 .  '".jpg"]',                             
             ])->categories()->attach(1);
@@ -38,7 +38,7 @@ class ProductsTableSeeder extends Seeder
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                 'image' => 'women-clothes/'.$i.'.jpg',
                 // 'image' => 'products/dummy/desktop-'.$i.'.jpg',                
-                'images' => '["products\/dummy\/women-clothes\/' . $i . '.jpg", "women-clothes\/' . $i . '.jpg"]',
+                'images' => '["women-clothes\/' . $i . '.jpg", "women-clothes\/' . $i . '.jpg"]',
             ])->categories()->attach(2);
         }
 

@@ -32,7 +32,7 @@
             </div> <!-- end hero -->
         </header>
         <div class="container">
-            <p>
+            <p style="padding: 20px 0px;">
                 The dashiki is a colorful garment for women and men worn mostly in West Africa.
                 It covers the top half of the body. It has formal and informal versions and varies 
                 from simple draped clothing to fully tailored suits. 

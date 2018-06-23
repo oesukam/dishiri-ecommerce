@@ -15,6 +15,7 @@ class Product extends Model
      *
      * @var array
      */
+    protected $hidden = ['created_at', 'updated_at'];
     protected $searchable = [
         /**
          * Columns and their priority in search results.

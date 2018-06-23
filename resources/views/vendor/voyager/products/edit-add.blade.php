@@ -145,8 +145,10 @@
             $('.form-group input[type=date]').each(function (idx, elt) {
                 if (elt.type != 'date' || elt.hasAttribute('data-datepicker')) {
                     elt.type = 'text';
+                    elt.required = false;
                     $(elt).datetimepicker($(elt).data('datepicker'));
                 }
+
             });
 
             @if ($isModelTranslatable)
@@ -191,7 +193,7 @@
             $('[data-toggle="tooltip"]').tooltip();
 
             var price = $('input[name="price"').val();
-            $('input[name="price"').val(price / 100);
+            // $('input[name="price"').val(price / 100);
         });
     </script>
 @stop
